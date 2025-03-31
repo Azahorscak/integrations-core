@@ -1512,6 +1512,11 @@ def test_statement_run_explain_errors(
             DBExplainError.explained_with_prepared_statement,
             None,
         ),
+        (
+            "select * from users where id = ($1)::uuid;",
+            DBExplainError.failed_to_explain_with_prepared_statement,
+            None,
+        ),
     ],
 )
 def test_statement_run_explain_parameterized_queries(

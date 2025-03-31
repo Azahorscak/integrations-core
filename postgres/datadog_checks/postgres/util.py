@@ -77,7 +77,7 @@ class DBExplainError(Enum):
     # the statement was explained with the prepared statement workaround
     explained_with_prepared_statement = 'explained_with_prepared_statement'
 
-    # the statement was tried to be explained with the prepared statement workaround but failedd
+    # the statement was tried to be explained with the prepared statement workaround but failed
     failed_to_explain_with_prepared_statement = 'failed_to_explain_with_prepared_statement'
 
     # the statement was tried to be explained with the prepared statement workaround but no plan was returned
