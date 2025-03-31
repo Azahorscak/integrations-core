@@ -1461,7 +1461,7 @@ def test_truncate_activity_rows(integration_check, dbm_instance, active_rows, ex
             "track_activity_query_size=1024",
         ),
         (
-            "SELECT * FROM persons WHERE city = $1 AND country = $2",
+            "SELECT * FROM persons WHERE city = $$1 AND country = $2",
             "error:explain-indeterminate_datatype-<class 'psycopg2.errors.IndeterminateDatatype'>",
             DBExplainError.indeterminate_datatype,
             "<class 'psycopg2.errors.IndeterminateDatatype'>",
