@@ -1513,8 +1513,8 @@ def test_statement_run_explain_errors(
             None,
         ),
         (
-            "select * from pg_settings where name = ($1)::uuid;",
-            DBExplainError.failed_to_explain_with_prepared_statement,
+            "select * from pg_settings where name = $1 + $2",
+            DBExplainError.indeterminate_datatype,
             None,
         ),
     ],
